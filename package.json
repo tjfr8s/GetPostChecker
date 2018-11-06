@@ -5,7 +5,8 @@
   "main": "main.js",
   "dependencies": {
     "express": "^4.16.4",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "forever": "^0.15.3"
   },
   "devDependencies": {},
   "scripts": {
