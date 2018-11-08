@@ -1,3 +1,8 @@
+/*******************************************************************************
+* Author: Tyler Freitas
+* Date: 11/8/2018
+* Email: freitast@oregonstate.edu
+*******************************************************************************/
 var express = require('express');
 
 var app = express();
@@ -11,6 +16,7 @@ app.use(bodyParser.json());
 app.set('port', process.argv[2]);
 
 
+// Route for get requests.
 app.get('/', function(req, res){
     var queryNames = [];
     for(var name in req.query){
@@ -22,6 +28,7 @@ app.get('/', function(req, res){
 });
 
 
+// Route for post requests.
 app.post('/', function(req, res){
     var queryNames = [];
     for(var name in req.body){
@@ -31,8 +38,6 @@ app.post('/', function(req, res){
     context.data = queryNames;
     res.render('post-request', context);
 });
-
-
 
 
 app.use(function (req, res) {
